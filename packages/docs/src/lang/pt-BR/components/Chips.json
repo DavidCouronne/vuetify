@@ -1,13 +1,12 @@
 {
   "examples": {
-    "usage": {
-      "uninverted": true
+    "icon": {
+      "heading": "### Ícone"
     },
     "outlined": {
-      "header": "### Contorno"
+      "heading": "### Contorno"
     },
     "closable": {
-      "header": "Fechável",
       "uninverted": true
     },
     "in-selects": {

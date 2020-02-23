@@ -1,16 +1,20 @@
 {
+  "heading": "# タブ",
+  "headingText": "'v-tabs' コンポーネントは、選択可能な項目の背後にあるコンテンツを非表示にするために使用されます。これは、タブがリンクであり、タブ項目がコンテンツであるページの擬似ナビゲーションとしても使用できます。",
   "examples": {
-    "right": {
-      "header": "### 右寄せタブ"
+    "usage": {
+      "desc": "'v-tabs' コンポーネントは、[v-item-group](/components/item-groups) のスタイル付き拡張です。これは、コンテンツのグループを整理するための使いやすいインターフェイスを提供します。"
     },
-    "pagination": {
-      "header": "### ページネーション"
+    "overflow-to-menu": {
+      "heading": "### メニュー付き"
     },
     "icons": {
-      "header": "### カスタムアイコン"
+      "heading": "### カスタムアイコン"
     }
   },
   "props": {
+    "dark": "Mixins.Themeable.props.dark",
+    "light": "Mixins.Themeable.props.light",
     "reverseTransition": "戻す際のトランジションを設定します。"
   }
 }

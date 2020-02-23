@@ -1,4 +1,5 @@
 {
+  "becomeSponsor": "Supporta Vuetify",
   "features": {
     "community": {
       "text": "Quando ci si imbatte in un problema, si ha bisogno di supporto immediato. Vuetify offre supporto sulla nostra grandissima comunità Discord.",
@@ -10,5 +11,5 @@
   },
   "getHelp": "Ottieni aiuto",
   "getStarted": "Per iniziare",
-  "whyVuetify": "Perche Vuetify?"
+  "whyVuetifyText2": "Perché scegliere Vuetify?"
 }

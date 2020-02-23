@@ -10,6 +10,7 @@ import { convertToUnit, getSlot } from '../../util/helpers'
 
 // Types
 import { VNode } from 'vue'
+import { PropValidator } from 'vue/types/options'
 
 export default mixins(Toggleable).extend({
   name: 'VLazy',
@@ -27,6 +28,10 @@ export default mixins(Toggleable).extend({
         rootMargin: undefined,
         threshold: undefined,
       }),
+    } as PropValidator<IntersectionObserverInit>,
+    tag: {
+      type: String,
+      default: 'div',
     },
     transition: {
       type: String,
@@ -44,27 +49,33 @@ export default mixins(Toggleable).extend({
 
   methods: {
     genContent () {
-      if (!this.isActive) return undefined
-
       const slot = getSlot(this)
 
       /* istanbul ignore if */
       if (!this.transition) return slot
 
+      const children = []
+
+      if (this.isActive) children.push(slot)
+
       return this.$createElement('transition', {
         props: { name: this.transition },
-      }, slot)
+      }, children)
     },
-    onObserve (entries: IntersectionObserverEntry[]) {
+    onObserve (
+      entries: IntersectionObserverEntry[],
+      observer: IntersectionObserver,
+      isIntersecting: boolean,
+    ) {
       if (this.isActive) return
 
-      this.isActive = Boolean(entries.find(entry => entry.isIntersecting))
+      this.isActive = isIntersecting
     },
   },
 
   render (h): VNode {
-    return h('div', {
-      staticClass: 'v-observe',
+    return h(this.tag, {
+      staticClass: 'v-lazy',
       attrs: this.$attrs,
       directives: [{
         name: 'intersect',
@@ -72,7 +83,7 @@ export default mixins(Toggleable).extend({
           handler: this.onObserve,
           options: this.options,
         },
-      }] as any,
+      }],
       on: this.$listeners,
       style: this.styles,
     }, [this.genContent()])

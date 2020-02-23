@@ -1,16 +1,17 @@
 {
-  "header": "# Data iterators",
-  "headerText": "`v-data-iterator` コンポーネントはデータを表示するために使用され、`v-data-table` コンポーネントと主要な機能を共有します。ソート、検索、ページネーション、選択の機能を含みます。",
+  "heading": "# データイテレータ",
+  "headingText": "`v-data-iterator`コンポーネントはデータの表示に使用され、その機能の大部分を`v-data-table`コンポーネントと共有します。機能にはソート、検索、ページネーション、および選択が含まれます。",
+  "usageText": "`v-data-iterator`を使用すると、データの表示方法を正確にカスタマイズできます。この例では、カードのあるグリッドを使用しています。",
   "examples": {
     "slots": {
       "desc": "`v-data-iterator`はその他のコンテンツの追加するためのheaderとfooterのslotを持っています。"
     },
     "expand": {
-      "desc": "`v-data-iterator` は選択されているか、ちょうど`v-data-table`のように拡大されているかの状態を持っています。このサンプルではデフォルトslotで`isExpanded`メソッドとに`expand`を使えるようになっています。"
+      "desc": "`v-data-iterator` は選択されているか、ちょうど`v-data-table`のように拡大されているかの状態を持っています。この例では、デフォルトのスロットで利用可能なメソッド `isExpanded`と` expand`を使用します。"
     },
     "filter": {
-      "header": "### フィルター",
-      "desc": "オーダー、フィルター、ページネーションが、それぞれのプロパティを使うことで外部からコントロールできます。"
+      "heading": "### フィルター",
+      "desc": "ソート順、フィルタ、ページネーションは、それぞれのプロパティを設定することで外部からコントロールできます。"
     }
   },
   "props": {
@@ -19,7 +20,7 @@
       "footerProps": "詳細は、`v-data-footer` APIを参照してください。",
       "hideDefaultFooter": "デフォルトのfooterを隠します。",
       "itemKey": "各itemでユニークキーとして使われるプロパティ。",
-      "loading": "もし`true`にして、itemsが設定されなかった場合、ローディングテキストが表示されます。",
+      "loading": "もし`true`にして、itemsが設定されなかった場合、ここに設定したローディングテキストが表示されます。",
       "loadingText": "`loading`がtrueで、itemsが何も設定されなかった場合に表示されるテキスト。"
     }
   }

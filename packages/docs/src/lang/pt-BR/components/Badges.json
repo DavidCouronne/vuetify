@@ -1,17 +1,1 @@
-{
-  "examples": {
-    "overlap": {
-      "header": "Sobreposição"
-    },
-    "visibility": {
-      "header": "Visibilidade"
-    },
-    "inline": {
-      "header": "Em linha",
-      "desc": "Marcadores também podem ser colocados em linha com o texto."
-    },
-    "icon": {
-      "desc": "O marcador pode usar todos os conjuntos de ícones atualmente suportados."
-    }
-  }
-}
+{}

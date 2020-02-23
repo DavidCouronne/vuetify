@@ -1,3 +1,4 @@
+@import '../../styles/styles.sass';
 @import '../../styles/tools/_functions.sass';
 
 $btn-active-opacity: 0.18 !default;
@@ -10,6 +11,7 @@ $btn-icon-padding: 12px !default;
 $btn-letter-spacing: .0892857143em !default;
 $btn-outline-border-width: thin !default;
 $btn-rounded-border-radius: 28px !default;
+$btn-text-transform: uppercase !default;
 $btn-transition-duration: 0.28s !default;
 $btn-transition-fn: map-get($transition, 'fast-out-slow-in') !default;
 $btn-transition: opacity 0.2s map-get($transition, 'ease-in-out') !default;

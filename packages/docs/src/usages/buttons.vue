@@ -5,12 +5,13 @@
       justify="center"
     >
       <v-btn
+        class="white--text"
         v-bind="{
           ...attrs,
           color: attrs.color || 'deep-purple accent-4',
           [attrs.size]: true
         }"
-        class="white--text"
+        :elevation="!hasElevation ? undefined : attrs.elevation"
       >
         <v-icon v-if="attrs.fab || attrs.icon">mdi-account</v-icon>
 
@@ -21,11 +22,19 @@
 </template>
 
 <script>
+  import Usage from './usage'
+
   export default {
-    props: {
-      attrs: {
-        type: Object,
-        default: () => ({}),
+    mixins: [Usage],
+
+    computed: {
+      hasElevation () {
+        return !(
+          this.attrs.outlined ||
+          this.attrs.depressed ||
+          this.attrs.icon ||
+          this.attrs.text
+        )
       },
     },
   }

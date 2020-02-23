@@ -1,9 +1,11 @@
 {
-  "header": "Breadcrumbs",
+  "usageText": "Por default, los breadcrumbs usan un divisor de texto. Este puede ser cualquier cadena.",
   "examples": {
     "icon-dividers": {
-      "header": "Divisores de íconos",
       "desc": "Para la variante de íconos, los breadcrumbs pueden ser utilizados con cualquier ícono de Material Design."
+    },
+    "item-slot": {
+      "desc": "Puedes usar el _slot_ `item` para personalizar cada _breadcrumb_."
     }
   }
 }

@@ -60,7 +60,7 @@ export default Selectable.extend({
       if (this.disabled && !this.inputIndeterminate) return undefined
       if (this.hasError && this.shouldValidate) return 'error'
       if (this.hasSuccess) return 'success'
-      if (this.hasColor) return this.computedColor
+      if (this.hasColor !== null) return this.computedColor
       return undefined
     },
   },
@@ -84,19 +84,20 @@ export default Selectable.extend({
       return this.$createElement('div', {
         staticClass: 'v-input--selection-controls__input',
       }, [
+        this.$createElement(VIcon, this.setTextColor(this.validationState, {
+          props: {
+            dense: this.dense,
+            dark: this.dark,
+            light: this.light,
+          },
+        }), this.computedIcon),
         this.genInput('checkbox', {
           ...this.attrs$,
           'aria-checked': this.inputIndeterminate
             ? 'mixed'
             : this.isActive.toString(),
         }),
-        this.genRipple(this.setTextColor(this.validationState)),
-        this.$createElement(VIcon, this.setTextColor(this.validationState, {
-          props: {
-            dark: this.dark,
-            light: this.light,
-          },
-        }), this.computedIcon),
+        this.genRipple(this.setTextColor(this.rippleState)),
       ])
     },
     genDefaultSlot () {

@@ -1,1 +1,15 @@
-{}
+{
+  "close": "閉じる",
+  "webpack": {
+    "title": "Webpack"
+  },
+  "nuxt": {
+    "title": "NUXT"
+  },
+  "pwa": {
+    "title": "PWA"
+  },
+  "aLaCarte": {
+    "title": "A La Carte"
+  }
+}

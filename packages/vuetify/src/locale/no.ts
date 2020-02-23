@@ -1,4 +1,5 @@
 export default {
+  badge: 'Skilt',
   close: 'Lukk',
   dataIterator: {
     noResultsText: 'Fant ingen matchende elementer.',
@@ -30,11 +31,11 @@ export default {
     prev: 'Forrige bilde',
     next: 'Neste bilde',
     ariaLabel: {
-      delimiter: 'Carousel slide {0} of {1}',
+      delimiter: 'Karusellbilde {0} av {1}',
     },
   },
   calendar: {
-    moreEvents: '{0} mer',
+    moreEvents: '{0} flere',
   },
   fileInput: {
     counter: '{0} filer',
